@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from '../models/Profile';
+import { ProfileService } from '../services/profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  profile: Profile;
+
+  constructor(
+    private profileService: ProfileService
+  ) { }
 
   ngOnInit() {
+    // TODO: Change id to variable from route
+    this.profileService.findById(23).subscribe(profile => {
+      this.profile = profile;
+    });
   }
 
 }

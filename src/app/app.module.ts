@@ -9,12 +9,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileService } from './services/profile.service';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SharedModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,

@@ -1,0 +1,63 @@
+.profile {
+  &__slides {
+    height: 55vh !important;
+    width: auto;
+
+    background-color: #fffbfd;
+
+    .slides {
+      width: 100%;
+      height: 100%;
+
+      .image {
+        width: 100% !important;
+        height: 100% !important;
+
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 50% 50%;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__info {
+    padding: 16px;
+
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      margin-bottom: 6px;
+      clear: both;
+    }
+
+    .section {
+      margin-top: 8px;
+      clear: both;
+    }
+
+    &__basic {
+      .name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+  
+      .age {
+        font-size: 18px;
+      }
+
+      width: 80%;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 12px;
+    }
+
+    &__description {
+      .description {
+        font-size: 14px;
+      }
+    }
+    
+  }
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AgePipe } from './pipes/age.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { AgePipe } from './pipes/age.pipe';
     CommonModule
   ],
   exports: [
+    TranslateModule,
     AgePipe
   ]
 })

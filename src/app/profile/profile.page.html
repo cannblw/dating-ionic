@@ -10,7 +10,7 @@
 
 <ion-content>
   <div class="profile__slides">
-    <ion-slides class="slides">
+    <ion-slides pager class="slides">
       <ion-slide *ngFor="let photo of profile.photos; trackBy: trackByPhotoId">
         <div class="image" [ngStyle]="{'background-image': 'url('+photo.url+')'}">
         </div>

@@ -1,4 +1,7 @@
 {
+  "__GLOBAL__": "",
+  "backButtonText": "Back",
+  
   "__PROFILE__": "",
   "profile": "Profile",
   "description": "About myself"

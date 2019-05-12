@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, Config } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { TranslateService } from '@ngx-translate/core';
@@ -14,7 +14,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private configService: Config,
   ) {
     this.initializeApp();
 
@@ -28,9 +29,16 @@ export class AppComponent {
     const browserLang = this.translate.getBrowserLang();
 
     if (browserLang !== undefined) {
-      this.translate.use(browserLang);
+      this.translate.use(browserLang).subscribe(() => this.setBackButtonText());
     } else {
-      this.translate.use(fallbackLanguage);
+      this.translate.use(fallbackLanguage).subscribe(() => this.setBackButtonText());
+    }
+  }
+
+  setBackButtonText(): void {
+    // Translate iOS back button text
+    if (this.platform.is('ios')) {
+      this.configService.set('backButtonText', this.translate.instant('backButtonText'));
     }
   }
 

@@ -1,14 +1,14 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'profile' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
 <ion-content>
-
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/"></ion-back-button>
-      </ion-buttons>
-      <ion-title>{{ 'profile' | translate }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div class="profile__slides">
     <ion-slides class="slides">
       <ion-slide *ngFor="let photo of profile.photos; trackBy: trackByPhotoId">

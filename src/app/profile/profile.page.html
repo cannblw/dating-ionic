@@ -2,16 +2,23 @@
   <div class="profile__slides">
     <ion-slides class="slides">
       <ion-slide *ngFor="let photo of profile.photos; trackBy: trackByPhotoId">
-        <div class="image"
-          [ngStyle]="{'background-image': 'url('+photo.url+')'}">
+        <div class="image" [ngStyle]="{'background-image': 'url('+photo.url+')'}">
         </div>
       </ion-slide>
     </ion-slides>
   </div>
 
   <div class="profile__info">
-    <span class="profile__info__name">{{ profile.name }}, </span><span
-      class="profile__info__age">{{ profile.birthday | age }}</span>
+
+    <div class="section profile__info__basic">
+      <span class="name">{{ profile.name }}, </span>
+      <span class="age">{{ profile.birthday | age }}</span>
+    </div>
+    
+    <div class="section profile__info__description">
+      <div class="title">{{ 'Descripción' }}</div> <!-- TODO: translate -->
+      <div class="description">{{ profile.description }}</div>
+    </div>
   </div>
 
 </ion-content>

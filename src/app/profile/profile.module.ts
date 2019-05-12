@@ -9,10 +9,8 @@ import { ProfilePage } from './profile.page';
 import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ProfilePage
-  }
+  { path: '', component: ProfilePage },
+  { path: ':id', component: ProfilePage }
 ];
 
 @NgModule({

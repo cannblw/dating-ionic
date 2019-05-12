@@ -9,3 +9,12 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+.swiper-pagination-bullet {
+  opacity: 0.5 !important;
+  background: white !important;
+
+  &.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+  }
+}

@@ -1,9 +1,9 @@
 .profile {
   &__slides {
-    height: 500px !important;
+    height: 60vh !important;
     width: auto;
 
-    background-color: #222;
+    background-color: #fffbfd;
 
     .slides {
       width: 100%;
@@ -12,7 +12,11 @@
       .image {
         width: 100% !important;
         height: 100% !important;
-        object-fit: contain !important;
+
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 50% 50%;
+        background-size: cover;
       }
     }
   }

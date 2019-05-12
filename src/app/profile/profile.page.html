@@ -1,22 +1,22 @@
+
 <ion-content>
   <div class="profile__slides">
-    <ion-slides class="slides">
-      <ion-slide>
-        <img
-          src="https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg"
-          class="image" />
-      </ion-slide>
-      <ion-slide>
-        <img
-          src="https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg"
-          class="image" />
-      </ion-slide>
-    </ion-slides>
+      <ion-slides class="slides">
+          <ion-slide>
+            <div class="image" [ngStyle]="{'background-image': 'url(https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg'}"></div>
+          </ion-slide>
+          <ion-slide>
+            <div class="image" [ngStyle]="{'background-image': 'url(https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg'}"></div>
+          </ion-slide>
+          <ion-slide>
+            <div class="image" [ngStyle]="{'background-image': 'url(https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg'}"></div>
+          </ion-slide>
+        </ion-slides>
   </div>
 
   <div class="profile__info">
-    <span class="profile__info__name">{{ profile.name }}, </span><span
-      class="profile__info__age">{{ profile.birthday | age }}</span>
+    <span class="profile__info__name">{{ profile.name }}, </span><span class="profile__info__age">{{ profile.birthday | age }}</span>
   </div>
-
+  
 </ion-content>
+

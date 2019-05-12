@@ -39,11 +39,14 @@ else
     git push --tags
 fi
 
-# Bump version
+# Bump npm version
 npm version patch --no-git-tag-version
-sed -i '' "s/version=\"$CURRENT\"/version=\"$NEXT\"/" config.xml
 
 # Update develop with new bumped version
 NEXT=$(npm version | perl -ne 'print $1 if /'"$PROJECT_NAME"'\D+(\d+\.\d+\.\d+)/')
-# git commit -a -m"Bump version to $NEXT"
-# git push
+
+# Bump config.xml version
+sed -i '' "s/version=\"$CURRENT\"/version=\"$NEXT\"/" config.xml
+
+git commit -a -m"Bump version to $NEXT"
+git push

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile } from '../models/Profile';
 import { ProfileService } from '../services/profile.service';
+import { Photo } from '../models/Photo';
 
 @Component({
   selector: 'app-profile',
@@ -20,6 +21,10 @@ export class ProfilePage implements OnInit {
     this.profileService.findById(23).subscribe(profile => {
       this.profile = profile;
     });
+  }
+
+  trackByPhotoId(_: number, item: Photo) {
+    return item.id;
   }
 
 }

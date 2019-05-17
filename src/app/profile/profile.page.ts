@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Profile } from '../models/Profile';
-import { ProfileService } from '../services/profile.service';
-import { Photo } from '../models/Photo';
+import { Profile } from '../shared/models/Profile';
+import { ProfileService } from '../shared/services/profile.service';
+import { Photo } from '../shared/models/Photo';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

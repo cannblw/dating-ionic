@@ -15,9 +15,10 @@ export class ProfileService {
     /* tslint:disable */
     return of({
       id,
-      name: 'Edgar Chirivella',
+      name: 'Sofía Test',
       birthday: '1995-03-28',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in mattis enim. Maecenas fringilla, odio non mattis ultrices, diam ex rutrum mauris, molestie sagittis urna quam id sem. Sed eget ornare lacus. Nunc aliquet sit amet purus sit amet euismod. Proin justo turpis, rutrum ac eros in, porttitor vulputate dolor. Nunc molestie purus urna, malesuada varius metus malesuada non. Sed vel magna sit amet tellus rhoncus lacinia. Duis vitae aliquam erat. Phasellus et dolor at magna cursus malesuada lacinia a turpis.',
+      shortDescription: 'Me gusta leer :)',
       photos: [
         { id: 1, url: 'https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg' },
         { id: 2, url: 'https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg' },
@@ -34,9 +35,10 @@ export class ProfileService {
     /* tslint:disable */
     const profile = {
       id: 1,
-      name: 'Edgar Chirivella',
+      name: 'Sofía Test',
       birthday: '1995-03-28',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in mattis enim. Maecenas fringilla, odio non mattis ultrices, diam ex rutrum mauris, molestie sagittis urna quam id sem. Sed eget ornare lacus. Nunc aliquet sit amet purus sit amet euismod. Proin justo turpis, rutrum ac eros in, porttitor vulputate dolor. Nunc molestie purus urna, malesuada varius metus malesuada non. Sed vel magna sit amet tellus rhoncus lacinia. Duis vitae aliquam erat. Phasellus et dolor at magna cursus malesuada lacinia a turpis.',
+      shortDescription: 'Me gusta leer :) También me encantan los animales',
       photos: [
         { id: 1, url: 'https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg' },
         { id: 2, url: 'https://previews.123rf.com/images/brickrena/brickrena1512/brickrena151200006/49127133-sonriendo-hipster-girl-in-su%C3%A9ter-de-punto-beanie-sombrero-y-con-la-taza-en-las-manos-en-el-fondo-blanc.jpg' },

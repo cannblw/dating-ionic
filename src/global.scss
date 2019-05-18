@@ -10,6 +10,10 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 
+.bold {
+  font-weight: bold;
+}
+
 .swiper-pagination-bullet {
   opacity: 0.5 !important;
   background: white !important;

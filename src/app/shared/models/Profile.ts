@@ -6,5 +6,6 @@ export interface Profile {
   name: string;
   birthday: string;
   description: string;
+  shortDescription: string;
   photos: Photo[];
 }

@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header>
   <ion-toolbar>
     <ion-title>
       {{ 'nearbyUsers' | translate }}
@@ -9,9 +9,14 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-        <ion-col size="6" size-sm wrap *ngFor="let profile of profiles">
-          ion-col
-        </ion-col>
+      <ion-col size="6" size-sm wrap *ngFor="let profile of profiles" routerLink="/profile">
+        <ion-card>
+          <img [src]="profile.photos[0].url || null" /> <!-- TODO: Add default photo in case of no pictures, but 1 picture should be mandatory -->
+        
+          <ion-card-header><span class="bold">{{ profile.name }}</span>, {{ profile.birthday | age }}</ion-card-header>
+          <ion-card-content>{{ profile.shortDescription }}</ion-card-content>
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

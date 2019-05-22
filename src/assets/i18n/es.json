@@ -7,5 +7,8 @@
   
   "__PROFILE__": "",
   "profile": "Perfil",
-  "description": "Sobre mí"
+  "description": "Sobre mí",
+
+  "__CHATS__": "",
+  "chats": "Chats"
 }

@@ -7,6 +7,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <span>Conversation!</span>
+<ion-content padding>
+  <div class="message-group sent">
+    <div class="message">Holius</div>
+    <div class="message">Holius</div>
+    <div class="message">HoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHoliusHolius</div>
+    <div class="message">Holius</div>
+    <span class="datetime">Hoy 20:35</span>
+  </div>
+
+  <div class="message-group received">
+    <div class="message">Hooolap</div>
+    <div class="message">HooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolapHooolap</div>
+    <div class="message">Hooolap</div>
+    <div class="message">Hooolap</div>
+    <span class="datetime">Hoy 22:12</span>
+  </div>
+
 </ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input placeholder="{{ 'writeAMessage' | translate }}"></ion-input>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="md-send"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-footer>

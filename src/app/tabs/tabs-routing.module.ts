@@ -8,44 +8,24 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        children: [
-          {
-            path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
-          }
+        path: 'tab1', children: [
+          { path: '', loadChildren: '../tab1/tab1.module#Tab1PageModule' }
         ]
       },
       {
-        path: 'nearby-users',
-        children: [
-          {
-            path: '',
-            loadChildren: './nearby-users/nearby-users.module#NearbyUsersPageModule'
-          }
+        path: 'nearby-users', children: [
+          { path: '', loadChildren: './nearby-users/nearby-users.module#NearbyUsersPageModule' }
         ]
       },
       {
-        path: 'chats',
-        children: [
-          {
-            path: '',
-            loadChildren: './chats/chats.module#ChatsPageModule'
-          }
+        path: 'chats', children: [
+          { path: '', loadChildren: './chats/chats.module#ChatsPageModule' }
         ]
       },
-      {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
-      }
+      { path: '', redirectTo: '/tabs/tab1', pathMatch: 'full' }
     ]
   },
-  {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
-  }
+  { path: '', redirectTo: '/tabs/tab1', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -54,4 +34,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

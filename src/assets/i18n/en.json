@@ -10,5 +10,6 @@
   "description": "About myself",
 
   "__CHATS__": "",
-  "chats": "Chats"
+  "chats": "Chats",
+  "writeAMessage": "Write a message..."
 }

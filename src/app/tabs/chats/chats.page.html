@@ -10,7 +10,9 @@
   <ion-item *ngFor="let chat of chats" routerLink="/conversation/1">
     <ion-avatar slot="start">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      <ion-badge color="danger">2</ion-badge>
     </ion-avatar>
-    <ion-label>Item Avatar</ion-label>
+    <ion-label>Sofía Prueba</ion-label>
+    <div slot="end" class="last-connection">Hace 2 minutos</div>
   </ion-item>
 </ion-content>

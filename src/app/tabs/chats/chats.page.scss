@@ -3,3 +3,23 @@ ion-item {
   --inner-padding-top: 16px;
   --inner-padding-bottom: 16px;
 }
+
+ion-avatar {
+  position: relative;
+
+  ion-badge {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+  }
+}
+
+ion-badge {
+  border-radius: 100% !important;
+}
+
+.last-connection {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+}

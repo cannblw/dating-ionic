@@ -6,4 +6,12 @@ ion-content {
 
 ion-card {
   background-color: white;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+ion-grid {
+  --ion-grid-padding: 8px;
+  --ion-grid-width: 8px;
+  --ion-grid-column-padding: 8px;
 }

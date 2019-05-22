@@ -22,3 +22,7 @@
     opacity: 1 !important;
   }
 }
+
+ion-item {
+  --ripple-color: var(--ion-color-primary);
+}

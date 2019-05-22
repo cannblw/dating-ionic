@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChatsPage } from './chats.page';
+import { ConversationPage } from './conversation.page';
 
 const routes: Routes = [
-  { path: '', component: ChatsPage },
+  { path: ':id', component: ConversationPage }
 ];
 
 @NgModule({
@@ -12,4 +12,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ChatsPageRoutingModule { }
+export class ConversationPageRoutingModule { }

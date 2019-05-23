@@ -58,4 +58,8 @@ export class ProfileService {
     }
     return of(profiles);
   }
+
+  editProfile(profile: Profile): Observable<any> {
+    return of({});
+  }
 }

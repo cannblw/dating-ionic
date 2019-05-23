@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
 
 import { ProfilePage } from './profile.page';
 import { SharedModule } from '../shared/shared.module';
+import { ProfilePageRoutingModule } from './profile-routing.module';
 
-const routes: Routes = [
-  { path: '', component: ProfilePage },
-  { path: ':id', component: ProfilePage }
-];
+
 
 @NgModule({
   imports: [
@@ -19,7 +15,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    ProfilePageRoutingModule
   ],
   declarations: [ProfilePage]
 })

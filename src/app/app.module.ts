@@ -18,10 +18,12 @@ import { ConfigService } from './shared/services/config.service';
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import localeCa from '@angular/common/locales/ca';
 import localeDe from '@angular/common/locales/de';
 import localeFr from '@angular/common/locales/fr';
 
 registerLocaleData(localeEs, 'es');
+registerLocaleData(localeCa, 'ca');
 registerLocaleData(localeDe, 'de');
 registerLocaleData(localeFr, 'fr');
 

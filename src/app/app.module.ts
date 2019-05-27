@@ -31,7 +31,7 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-function localeFactory(translate: TranslateService) {
+export function localeFactory(translate: TranslateService) {
   const defaultLocale = 'es';
   const browserLang = translate.getBrowserLang();
   return browserLang || defaultLocale;

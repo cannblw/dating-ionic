@@ -15,7 +15,8 @@ export class ProfileService {
     /* tslint:disable */
     return of({
       id,
-      name: 'Sofía Test',
+      name: 'Sofía',
+      surname: 'Test',
       birthday: '1995-03-28',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in mattis enim. Maecenas fringilla, odio non mattis ultrices, diam ex rutrum mauris, molestie sagittis urna quam id sem. Sed eget ornare lacus. Nunc aliquet sit amet purus sit amet euismod. Proin justo turpis, rutrum ac eros in, porttitor vulputate dolor. Nunc molestie purus urna, malesuada varius metus malesuada non. Sed vel magna sit amet tellus rhoncus lacinia. Duis vitae aliquam erat. Phasellus et dolor at magna cursus malesuada lacinia a turpis.',
       shortDescription: 'Me gusta leer :)',
@@ -33,9 +34,10 @@ export class ProfileService {
 
   findNearby(): Observable<Profile[]> {
     /* tslint:disable */
-    const profile = {
+    const profile: Profile = {
       id: 1,
-      name: 'Sofía Test',
+      name: 'Sofía',
+      surname: 'Test',
       birthday: '1995-03-28',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in mattis enim. Maecenas fringilla, odio non mattis ultrices, diam ex rutrum mauris, molestie sagittis urna quam id sem. Sed eget ornare lacus. Nunc aliquet sit amet purus sit amet euismod. Proin justo turpis, rutrum ac eros in, porttitor vulputate dolor. Nunc molestie purus urna, malesuada varius metus malesuada non. Sed vel magna sit amet tellus rhoncus lacinia. Duis vitae aliquam erat. Phasellus et dolor at magna cursus malesuada lacinia a turpis.',
       shortDescription: 'Me gusta leer :) También me encantan los animales',
@@ -55,5 +57,9 @@ export class ProfileService {
       profiles.push(profile);
     }
     return of(profiles);
+  }
+
+  editProfile(profile: Profile): Observable<any> {
+    return of({});
   }
 }

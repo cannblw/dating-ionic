@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -9,14 +9,32 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { ConfigService } from './shared/services/config.service';
+
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import localeCa from '@angular/common/locales/ca';
+import localeDe from '@angular/common/locales/de';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeEs, 'es');
+registerLocaleData(localeCa, 'ca');
+registerLocaleData(localeDe, 'de');
+registerLocaleData(localeFr, 'fr');
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+export function localeFactory(translate: TranslateService) {
+  const defaultLocale = 'es';
+  const browserLang = translate.getBrowserLang();
+  return browserLang || defaultLocale;
 }
 
 @NgModule({
@@ -44,6 +62,8 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: LOCALE_ID, useFactory: localeFactory, deps: [TranslateService] },
+    ConfigService
   ],
   bootstrap: [AppComponent]
 })

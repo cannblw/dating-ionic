@@ -8,6 +8,29 @@
 </ion-header>
 
 
-<ion-content>
-  Edit profile
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.name" name="name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellidos</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.surname" name="surname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de nacimiento</ion-label>
+    <ion-datetime [(ngModel)]="profile.birthday" name="birthday" [displayFormat]="localeDateFormat"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción corta</ion-label>
+    <ion-input [(ngModel)]="profile.shortDescription" name="shortDescription"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción completa</ion-label>
+    <ion-textarea [(ngModel)]="profile.description" name="description" rows="5" spellcheck="true"></ion-textarea>
+  </ion-item>
 </ion-content>

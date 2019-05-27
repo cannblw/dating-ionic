@@ -8,8 +8,8 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1', children: [
-          { path: '', loadChildren: '../tab1/tab1.module#Tab1PageModule' }
+        path: 'my-profile', children: [
+          { path: '', loadChildren: './my-profile/my-profile.module#MyProfilePageModule' }
         ]
       },
       {
@@ -22,10 +22,10 @@ const routes: Routes = [
           { path: '', loadChildren: './chats/chats.module#ChatsPageModule' }
         ]
       },
-      { path: '', redirectTo: '/tabs/tab1', pathMatch: 'full' }
+      { path: '', redirectTo: '/tabs/nearby-users', pathMatch: 'full' }
     ]
   },
-  { path: '', redirectTo: '/tabs/tab1', pathMatch: 'full' }
+  { path: '', redirectTo: '/tabs/nearby-users', pathMatch: 'full' }
 ];
 
 @NgModule({

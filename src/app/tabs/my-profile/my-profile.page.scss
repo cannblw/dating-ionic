@@ -1,0 +1,33 @@
+
+ion-content {
+  --ion-background-color: #f7f7f7;
+}
+
+ion-item {
+  --background: white;
+}
+
+.section {
+  margin-top: 12px;
+
+  ion-item {
+    margin-top: 12px;
+  }
+}
+
+.field-title {
+  display: block;
+  margin-left: 12px;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.field-description {
+  display: block;
+  margin-left: 12px;
+  font-size: 14px;
+
+  color: #999;
+  font-style: italic;
+}

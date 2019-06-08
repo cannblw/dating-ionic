@@ -7,5 +7,50 @@
 </ion-header>
 
 <ion-content>
-   My profile
+  <div class="section">
+    <span class="field-title">{{ 'shortDescription' | translate }}</span>
+    <span class="field-description">{{ 'shortDescriptionDescription' | translate }}</span>
+    <ion-item>
+      <ion-input></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="section">
+    <span class="field-title">{{ 'fullDescription' | translate }}</span>
+    <span class="field-description">{{ 'fullDescriptionDescription' | translate }}</span>
+    <ion-item>
+      <ion-textarea rows="5"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="section">
+    <span class="field-title">{{ 'yourPhotos' | translate }}</span>
+    <span class="field-description">{{ 'yourPhotosDescription' | translate }}</span>
+    <ion-reorder-group (ionItemReorder)="onReorderPhoto($event)" disabled="false">
+      <ion-item button (click)="openPhotoPreview()">
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-avatar slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>Item 1</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item button (click)="openPhotoPreview()">
+        <ion-ripple-effect></ion-ripple-effect>
+
+        <ion-avatar slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>Item 2</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+    
+    <ion-item button (click)="openPhotoPicker()">
+      <ion-ripple-effect></ion-ripple-effect>
+      <ion-label class="ion-text-center">{{ 'addPhoto' | translate }}</ion-label>
+      <ion-icon name="add" slot="end"></ion-icon>
+    </ion-item>
+  </div>
 </ion-content>

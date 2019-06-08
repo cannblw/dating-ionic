@@ -11,6 +11,15 @@
   "editProfile": "Editar perfil",
   "description": "About myself",
 
+  "__MY_PROFILE__": "",
+  "shortDescription": "Short description",
+  "shortDescriptionDescription": "Make a good first impression",
+  "fullDescription": "Description",
+  "fullDescriptionDescription": "Let other people know more about you",
+  "yourPhotos": "Your photos",
+  "yourPhotosDescription": "Let them see you",
+  "addPhoto": "Add photo...",
+
   "__CHATS__": "",
   "chats": "Chats",
   "writeAMessage": "Write a message..."

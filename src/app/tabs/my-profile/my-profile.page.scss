@@ -13,6 +13,10 @@ ion-item {
   ion-item {
     margin-top: 12px;
   }
+
+  &.last {
+    padding-bottom: 24px;
+  }
 }
 
 .field-title {

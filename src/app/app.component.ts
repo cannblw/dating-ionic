@@ -18,34 +18,39 @@ export class AppComponent {
     private configService: Config,
   ) {
     this.initializeApp();
+  }
 
+  private async initializeApp(): Promise<void> {
+    await this.platform.ready();
+    if (this.platform.is('cordova')) {
+      this.statusBar.styleBlackTranslucent();
+      this.splashScreen.hide();
+    }
+
+    await this.initializeTranslations();
+    this.overrideIonicConfig();
+  }
+  
+  private initializeTranslations(): Promise<any> {
     // TODO: Set fallback language to 'en'
     const fallbackLanguage = 'es';
-
+    
     // This language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang(fallbackLanguage);
-
+    this.translate.setDefaultLang(fallbackLanguage);
+    
     // Set language based on browser language
     const browserLang = this.translate.getBrowserLang();
-
+    
     if (browserLang !== undefined) {
-      this.translate.use(browserLang).subscribe(() => this.setBackButtonText());
+      return this.translate.use(browserLang).toPromise();
     } else {
-      this.translate.use(fallbackLanguage).subscribe(() => this.setBackButtonText());
+      return this.translate.use(fallbackLanguage).toPromise();
     }
   }
 
-  setBackButtonText(): void {
-    // Translate iOS back button text
+  private overrideIonicConfig(): void {
     if (this.platform.is('ios')) {
       this.configService.set('backButtonText', this.translate.instant('backButtonText'));
     }
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleBlackTranslucent();
-      this.splashScreen.hide();
-    });
   }
 }

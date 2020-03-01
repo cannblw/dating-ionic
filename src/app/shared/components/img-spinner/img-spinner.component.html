@@ -1,0 +1,4 @@
+<div [class]="contentContainerClass">
+  <ion-spinner *ngIf="loading" color="medium"></ion-spinner>
+  <img [hidden]="loading" (load)="onLoad()" src="{{ imgSrc }}" />
+</div>

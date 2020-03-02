@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ImgSpinnerComponent {
 
   @Input('src') imgSrc: string;
-  @Input('class') contentContainerClass: string;
+  @Input('class') contentContainerClass = '';
 
   loading: boolean = true
 

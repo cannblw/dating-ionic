@@ -4,12 +4,14 @@ import { AgePipe } from './pipes/age.pipe';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProfileService } from './services/profile.service';
 import { ImgSpinnerComponent } from './components/img-spinner/img-spinner.component';
+import { HeaderComponent } from './components/header/header.component';
 import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
     AgePipe,
-    ImgSpinnerComponent
+    ImgSpinnerComponent,
+    HeaderComponent
   ],
   providers: [
     ProfileService
@@ -21,7 +23,8 @@ import { IonicModule } from '@ionic/angular';
   exports: [
     TranslateModule,
     AgePipe,
-    ImgSpinnerComponent
+    ImgSpinnerComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }

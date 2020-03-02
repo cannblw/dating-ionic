@@ -15,3 +15,10 @@ ion-grid {
   --ion-grid-width: 8px;
   --ion-grid-column-padding: 8px;
 }
+
+.photo-container {
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
